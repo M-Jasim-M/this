@@ -1,0 +1,200 @@
+.createwomain {
+    background-image: url('../../Asserts/Images/background2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createlogo {
+    padding: 40px 0px 0px 40px;
+    width: 150px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.createcenter {
+    width: 370px;
+    height: 450px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 9px 12px 53px 0px rgba(0, 0, 0, 0.05);
+    padding-inline: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.createcenter div:nth-of-type(1) {
+    color: #252525;
+    font-family: Gilroy-SemiBold;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.createcenter div:nth-of-type(2) {
+    text-align: center;
+    font-family: Gilroy-Medium;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 10px;
+    color: #2525258a;
+}
+
+.createcenter div:nth-of-type(3) {
+    font-family: Gilroy-Medium;
+    font-size: 20px;
+    color: #252525;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+/* Define your container with scrollbar styles */
+.linedivs {
+    width: 100%;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: scroll;
+    /* Hide the scrollbar by default */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent;
+}
+
+/* Customize scrollbar for Webkit browsers */
+.linedivs::-webkit-scrollbar {
+    width: 5px;
+}
+
+.linedivs::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+/* Show the scrollbar when the content overflows */
+.linedivs:after {
+    content: '';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.linediv {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 16px;
+background: rgba(244, 244, 244, 0.50);
+padding: 5px;
+}
+
+.linediv input {
+    width: 15px;
+    height: 15px;
+}
+
+.linediv img {
+    width: 60px;
+    height: 60px;
+}
+
+.linediv div:nth-of-type(1) {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2BAC76;
+    font-family: Gilroy-Bold;
+    font-weight: 600;
+}
+
+.linediv span:nth-of-type(1) {
+    display: flex;
+    /* justify-content: center; */
+    color: #A8A8A8;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    align-items: center;
+    height: 40px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.linediv span:nth-of-type(1) img {
+    width: 60px;
+}
+
+.createcenter div:nth-of-type(5) button {
+    width: 100%;
+    border-radius: 16px;
+    background: #2BAC76;
+    border: none;
+    color: white;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.createcenter div:nth-of-type(6) {
+    color: #A8A8A8;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    position: relative;
+}
+
+.createcenter div:nth-of-type(6)::before {
+    position: absolute;
+    content: "";
+    top: 68%;
+    left: 55%;
+    width: 20%;
+    height: 1px;
+    background-color: #A8A8A8;
+}
+
+.createcenter div:nth-of-type(6)::after {
+    position: absolute;
+    content: "";
+    top: 68%;
+    width: 20%;
+    left: 25%;
+    height: 1px;
+    background-color: #A8A8A8;
+}
+
+
+.createcenter div:nth-of-type(7) {
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 16px;
+    color: white;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #2BAC76;
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #2BAC76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+@media(max-width:430px){
+.createcenter {
+    padding-top: 60px !important;
+}
+}

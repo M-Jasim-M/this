@@ -1,0 +1,19 @@
+.mainchatpop{
+position: absolute;
+top: 0px;
+left: 0px;
+background: #00000012;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100vh;
+z-index: 9;
+}
+.chatcontainer{
+width: 94%;
+height: 92vh;
+background-color: white;
+border-radius: 30.252px;
+background: #FFF;
+}

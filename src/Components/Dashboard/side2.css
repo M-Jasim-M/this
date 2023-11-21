@@ -1,0 +1,170 @@
+/* .sidemain{
+    /* padding: 10px 5px 0px 5px; 
+} 
+
+*/
+
+.smaine {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.s2ma {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #FBFBFB;
+    border-radius: 20px;
+    padding: 0px 0px 0px 20px;
+    margin: 6px;
+}
+
+.projec {
+    color: #CFCFD9;
+    font-family: Gilroy-Medium;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.fif {
+    margin-top: 5px;
+    border-left: 3px solid #099AE0;
+    color: #252525;
+    font-family: Gilroy-SemiBold;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.flie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 12px;
+
+
+}
+
+.firss {
+    font-family: Gilroy-Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.5294px;
+    color: #363F5E;
+
+
+}
+
+/* .firsss {} */
+
+/* this is the code for the below end of the side bar */
+.mainn {
+    display: flex;
+    padding: 0px 12px;
+    
+}
+
+/* .imag3 {} */
+
+.imag3 img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
+
+/* .chilll {} */
+
+.lily {
+    /* padding: 10px 0px 0px 10px; */
+    font-family: Gilroy-Medium;
+    font-weight: 400;
+    font-size: 12px;
+    color: #363F5E;
+    padding-left: 10px;
+
+}
+
+.today {
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 10.8235px;
+    color: #4CAF50;
+  
+}
+
+.comme {
+    padding: 10px 0px 0px 10px;
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 10.8235px;
+    color: #363F5E;
+}
+
+.colo {
+    color: #69D0CA;
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+
+}
+
+.thats {
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 10.8235px;
+    color: #1C274C;
+    background: #FBFBFB;
+    padding: 10px 0px 0px 20px;
+    border-radius: 10px;
+}
+
+.commentsdiv {
+    height: 46vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.commentsdiv::-webkit-scrollbar {
+    width: 5px;
+}
+
+.commentsdiv::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+/* Show the scrollbar when the content overflows */
+.commentsdiv:after {
+    content: '';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+
+@media(max-width:1024px) {
+    .s2ma {
+        width: 100px;
+    }
+}
+
+@media(max-width:500px) {
+    .sidemain{
+        display: none;
+    }
+    .s2ma {
+        width: 80px;
+    }
+}

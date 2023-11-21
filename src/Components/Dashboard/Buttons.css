@@ -1,0 +1,76 @@
+.overdue{
+    width: 215px;
+}
+
+.buttondiv{
+width: 210px;
+height: 40px;
+border-radius: 16px;
+border-left: 5px solid #F2713A;
+background: #FFF;
+color: #F2713A;
+font-family: Gilroy-Bold;
+font-size: 14px;
+font-weight: 600;
+display: flex;
+align-items: center;
+padding-left: 20px;
+margin: 10px 0px;
+}
+
+.compleate{
+    width: 215px;
+}
+
+.buttondiv2{
+    width: 210px;
+    height: 40px;
+    border-radius: 16px;
+    border-left: 5px solid #2BAC76;
+    background: #FFF;
+    color: #2BAC76;
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin: 10px 0px;
+    }
+
+.waiting{
+    width: 215px;
+}
+.buttondiv3{
+    width: 210px;
+    height: 40px;
+    border-radius: 16px;
+    border-left: 5px solid #0582CA;
+    background: #FFF;
+    color: #0582CA;
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin: 10px 0px;
+    }
+    .progress{
+        width: 215px;
+    }
+    .buttondiv4{
+        width: 210px;
+        height: 40px;
+        border-radius: 14px;
+        border-left: 5px solid #6A6EA4;
+        background: #FFF;
+        color: #6A6EA4;
+        font-family: Gilroy-Bold;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        margin: 10px 0px;
+        }

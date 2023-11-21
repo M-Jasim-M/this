@@ -1,0 +1,285 @@
+.msignup {
+    display: flex;
+}
+
+.signleft {
+    background-image: url('../../Asserts/Images/background.png');
+    width: 60%;
+    height: 564px;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagelogo {
+    padding: 40px 0px 0px 40px;
+    width: 150px;
+}
+
+.signleft div:nth-of-type(1) {
+    width: 100%;
+    height: 88vh;
+}
+
+.signleft div:nth-of-type(1) img {
+    width: 100%;
+    height: 86vh;
+}
+
+/* this si the the css for the form */
+
+.signright {
+    width: 40%;
+    height: 100vh;
+    background: #EAEDFE;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sign {
+    font-family: Gilroy-SemiBold;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: #2E3032;
+}
+
+.enter {
+    color: #2E3032;
+    font-family: Gilroy-Regular;
+    font-style: normal;
+    font-weight: 400;
+    opacity: 0.3;
+    font-size: 16px;
+    padding: 10px 0px 20px 0px;
+}
+
+form {
+    position: relative;
+}
+
+.emi {
+    color: #2E3032;
+    font-family: Gilroy-Medium;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 30px 0px 0px 0px;
+}
+
+form input {
+    width: 403px;
+    height: 48px;
+    background: #FBFBFB;
+    border-radius: 16px;
+    border: none;
+    margin: 3px 0px 10px 0px;
+    text-indent: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Gilroy-Regular;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input::placeholder {
+    font-family: Gilroy-Regular;
+    opacity: 0.5;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #2E3032;
+    
+}
+
+.pas {
+    font-family: 'Gilroy-Medium';
+    color: #2E3032;
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.con {
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    color: #2E3032;
+    padding: 10px 0px 0px 0px;
+}
+
+.but button {
+    width: 403px;
+    height: 48px;
+    background: #2bac76;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Gilroy-SemiBold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+.button {
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    color: #2E3032;
+    text-decoration: none;
+    padding: 25px 0px 0px 0px;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.check {
+    color: red;
+}
+
+.main0 {
+    display: flex;
+}
+
+.ch1 {
+    display: flex;
+}
+
+.sho {
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    /* padding: 9px 0px 0px 5px; */
+}
+
+.reset {
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0px 0px 130px;
+    color: #2bac76;
+}
+
+/* this  is for the icons */
+
+.gmi1 {
+    position: absolute;
+    top: 14%;
+    left: 5%;
+}
+
+.gmi2 {
+    position: absolute;
+    top: 42%;
+    left: 5%;
+}
+
+.gmi3 {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+
+.ore {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.google {
+    width: 403px;
+    height: 52px;
+    border: 1px solid #2bac76 !important;
+    font-family: Gilroy-Medium;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 10px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+
+@media(max-width:1024px) {
+    .signleft {
+        width: 55%;
+    }
+
+    .signright {
+        width: 45%;
+    }
+}
+
+@media(max-width:768px) {
+    .loginleft {
+        width: 55%;
+    }
+
+    .enter {
+        font-size: 14px;
+    }
+
+    .sho {
+        font-size: 14px;
+    }
+
+    .reset {
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 0px 0px 63px;
+    }
+
+    .loginright {
+        width: 45%;
+        padding-left: 20px;
+    }
+
+    form input {
+        width: 280px;
+    }
+
+    .but button {
+        width: 280px;
+    }
+
+    .google {
+        width: 280px;
+    }
+}
+
+@media(max-width:430px) {
+    .msignup{
+        flex-direction: column;
+    }
+    .signleft {
+        width: 100%;
+        display: none;
+    }
+
+    .signright {
+        width: 100%;
+    }
+    form input {
+        width: 330px;
+    }
+
+    .but button {
+        width: 330px;
+    }
+
+    .google {
+        width: 330px;
+    }
+}

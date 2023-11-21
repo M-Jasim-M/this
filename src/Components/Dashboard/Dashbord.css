@@ -1,0 +1,263 @@
+
+.dmain {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    margin-top: 20px;
+    align-items: center;
+    font-family: "Gilroy-Medium";
+    flex-wrap: wrap;
+
+}
+
+.dimg1 img {
+    height: 22px;
+    width: 40px;
+
+}
+
+.ddas {
+    font-family: Gilroy-SemiBold;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.ser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ser input {
+    font-family: "Gilroy-Medium";
+    height: 40px;
+    width: 350px;
+    border-radius: 16px;
+    background: #F6F6F6;
+    border-radius: 16px;
+    border: none;
+    text-indent: 20px;
+    outline: none;
+}
+
+.ser input::placeholder {
+    font-size: 16px;
+    color: #1C274C;
+    opacity: 0.4;
+}
+
+.ser svg {
+    position: absolute;
+    top: -2px;
+    right: 5px;
+}
+
+.dic {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dic svg {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.star {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #2BAC76;
+    font-family: Gilroy-SemiBold;
+    font-weight: 400;
+}
+
+.dani {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0D062D;
+
+    /* padding-right: 10px; */
+}
+
+.da {
+    color: #787486;
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.noti {
+    /* margin: 10px 0px 0px 15px; */
+    position: relative;
+}
+
+.noti div:nth-of-type(1) {
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    right: 0px;
+}
+
+.dimgd img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* code for exported componet */
+
+
+.na {
+    display: flex;
+}
+
+.slider {}
+
+.maicard {
+    margin-top: 10px;
+    padding: 5px 5px 0px 5px;
+    background: #FBFBFB;
+    border-radius: 20px;
+    width: 82%;
+    overflow-y: scroll;
+    height: 87vh;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    gap: 10px;
+    background: #EAEDFE;
+    padding-left: 1rem;
+}
+
+.maicard::-webkit-scrollbar {
+    width: 5px;
+}
+
+.maicard::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+/* Show the scrollbar when the content overflows */
+.maicard:after {
+    content: '';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+
+.side2 {
+    margin-top: 20px;
+    width: 300px;
+    height: 86vh;
+    
+}
+
+@media (max-width:768px){
+    .ser input {
+        width: 160px;
+    }
+    .cards{
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width:430px){
+    .side2{
+        display: none;
+    }
+    .maicard{
+        padding: 0px;
+        width: 84%;
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+    }
+.cards{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the responsive for the nav bar in the website */
+
+.dmain{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.dimg1 img{
+    height: 18px;
+    width: 30px;
+}
+.ddas{
+font-size: 15px;
+}
+.ser{
+    display: none;
+}
+.star{
+    width: 90px;
+    height: 30px;
+    gap: 5px;
+}
+.dic {
+    background-color: white;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+}
+.project{
+    font-size: 10px;
+}
+.name{
+    font-size: 14px;
+}
+.da{
+    font-size: 12px;
+}
+
+.dimgd img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+}
+
+
