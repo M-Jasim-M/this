@@ -26,7 +26,7 @@ function Members() {
           <div id='members'>
           <NavLink to="/dashboard/file">Files</NavLink>
             <NavLink to="/dashboard/members">Members</NavLink>
-            <span className='crossicon' onClick={gotodashboard}><Icon icon="basil:cross-solid" /></span>
+            <span className='crossicon2' onClick={gotodashboard}><Icon icon="basil:cross-solid" /></span>
           </div>
           <div>
             <input type="serch" placeholder='Search here members' />
