@@ -12,6 +12,7 @@ import Task from '../Taskpop/Task';
 import Chat from '../Chat/Chat';
 // import File from '../Filesmembers/File';
 import { Outlet } from 'react-router-dom';
+import Container5 from '../Workspace2/Workspace5';
 export default function Dashboard() {
 
   const [task ,Settask] = useState(false);
@@ -41,11 +42,11 @@ export default function Dashboard() {
 
         <div className='maicard'>
           <div className='cards'>
-            <Inprogress chat={showchat} />
+            {/* <Inprogress chat={showchat} />
             <Waiting  chat={showchat}/>
             <Compleate chat={showchat}/>
-            <Overdue chat={showchat}/>
-
+            <Overdue chat={showchat}/> */}
+<Container5/>
           </div>
 
         </div>

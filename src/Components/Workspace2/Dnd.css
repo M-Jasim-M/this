@@ -17,7 +17,7 @@
   .plus {
     box-shadow: none;
     background-color: #fff;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     margin-left: 5px;
   }
   
@@ -28,7 +28,7 @@
   .drop-area {
     min-height: 600px;
     padding: 5px;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
   }
   
   .drop-area p {

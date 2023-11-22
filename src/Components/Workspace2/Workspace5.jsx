@@ -51,11 +51,28 @@ let data = [
   },
   {
     type: 'Doing',
-    content: [],
+    content: [
+      {
+        id: 104,
+        name: 'Programming',
+        stars: 'five stars',
+        fname: 'ashfjkhf',
+        bname: 'afhdjfh',
+        class: 'sfjhsjhf',
+      },
+    ],
   },
   {
     type: 'Done',
-    content: [],
+    content: [{
+      id: 104,
+      name: 'Programming',
+      stars: 'five stars',
+      fname: 'ashfjkhf',
+      bname: 'afhdjfh',
+      class: 'sfjhsjhf',
+    },
+  ],
   },
 ];
 
