@@ -10,6 +10,7 @@
     flex-direction: column;
     padding-inline: 15px;
     margin: 10px 5px;
+    border: 1px solid red;
 }
 
 .had {

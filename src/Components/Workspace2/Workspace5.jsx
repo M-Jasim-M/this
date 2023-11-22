@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDrop, useDrag, DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { EventEmitter } from 'events';
+import Card2 from '../Dashboard/Card';
 import './Dnd.css';
 
 let data = [
@@ -13,11 +14,25 @@ let data = [
         id: 100,
         name: 'Build application server',
         stars: 'five stars',
+        fname: 'ashfjkhf',
+        bname: 'afhdjfh',
+        class: 'sfjhsjhf',
       },
       {
         id: 101,
         name: 'Continue Coding',
         stars: 'five stars',
+        fname: 'ashfjkhf',
+        bname: 'afhdjfh',
+        class: 'sfjhsjhf',
+      },
+      {
+        id: 102,
+        name: 'Continue Coding',
+        stars: 'five stars',
+        fname: 'ashfjkhf',
+        bname: 'afhdjfh',
+        class: 'sfjhsjhf',
       },
     ],
   },
@@ -28,6 +43,9 @@ let data = [
         id: 104,
         name: 'Programming',
         stars: 'five stars',
+        fname: 'ashfjkhf',
+        bname: 'afhdjfh',
+        class: 'sfjhsjhf',
       },
     ],
   },
@@ -44,25 +62,73 @@ let data = [
 let newId = 0;
 let listener = new EventEmitter();
 
+const mutateData = (id, value, stars, fname, bname, currentType, type) => {
+  data = data.map((obj) => {
+    let rObj = obj;
+    if (rObj.type === currentType) {
+      rObj.content = rObj.content.filter((obj) => obj.id !== id);
+    }
+    if (rObj.type === type) {
+      rObj.content.push({
+        id,
+        name: value,
+        stars,
+        fname,
+        bname,
+        class: 'default class', // You may set a default value for class if needed
+      });
+    }
+    return rObj;
+  });
+  listener.emit('moved');
+};
+
+const itemTypes = {
+  CARD: 'card',
+};
+
+const CardDrop = ({ type, children }) => {
+  const [, drop] = useDrop({
+    accept: itemTypes.CARD,
+    drop: (props, monitor) => {
+      const items = monitor.getItem();
+      let { type: currentType, value, id, stars, fname, bname } = items;
+      console.log('Item dropped: ', value, id);
+      mutateData(id, value, stars, fname, bname, currentType, type);
+    },
+  });
+
+  return <div ref={drop} className="drop-area">{children}</div>;
+};
+
+const Card = ({ value, newItem, pos, id, type, stars, fname, bname, className }) => {
+  const [, drag] = useDrag({
+    type: itemTypes.CARD,
+    item: { id, value, pos, type, stars, fname, bname, className },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+      dropResult: monitor.getDropResult(),
+    }),
+  });
+
+  const opacity = newItem ? 0.7 : 1;
+
+  return (
+    <div ref={drag} style={{ opacity }} className="draggable-card">
+      <div>
+        {/* <div>Name: {value}</div>
+        <div>Stars: {stars}</div>
+        <div>F Name: {fname}</div>
+        <div>B Name: {bname}</div>
+        <div>Class: {className}</div> */}
+        <Card2/>
+      </div>
+    </div>
+  );
+};
+
 const CardDeck = () => {
   const [stateData, setStateData] = useState(data);
-
-  const mutateData = (id, value, currentType, type) => {
-    data = data.map((obj) => {
-      let rObj = obj;
-      if (rObj.type === currentType) {
-        rObj.content = rObj.content.filter((obj) => obj.id !== id);
-      }
-      if (rObj.type === type) {
-        rObj.content.push({
-          id,
-          name: value,
-        });
-      }
-      return rObj;
-    });
-    listener.emit('moved');
-  };
 
   useEffect(() => {
     listener.on('moved', () => {
@@ -78,7 +144,7 @@ const CardDeck = () => {
           <div className="panel">
             <h3 className="panel-label">{obj.type}</h3>
           </div>
-          <CardDrop type={obj.type} mutateData={mutateData}>
+          <CardDrop type={obj.type}>
             {obj.content.map((val, idx) => (
               <Card
                 key={val.id}
@@ -88,89 +154,14 @@ const CardDeck = () => {
                 newItem={val.id === newId}
                 type={obj.type}
                 stars={val.stars}
+                fname={val.fname}
+                bname={val.bname}
+                className={val.class}
               />
             ))}
           </CardDrop>
         </div>
       ))}
-      <CardDrop type="First Icebox" mutateData={mutateData}>
-        <YouTubeCard />
-        <FiveStarCard />
-      </CardDrop>
-    </div>
-  );
-};
-
-const CardDrop = ({ type, children, mutateData }) => {
-  const [, drop] = useDrop({
-    accept: 'card',
-    drop: (props, monitor) => {
-      const items = monitor.getItem();
-      const { type: currentType, value, id } = items;
-      // Mutate data
-      console.log('Item: ', value, id);
-      mutateData(id, value, currentType, type);
-    },
-  });
-
-  return <div ref={drop} className="drop-area">{children}</div>;
-};
-
-const Card = ({ value, newItem, pos, id, type, stars }) => {
-  const [, drag] = useDrag({
-    type: 'card',
-    item: { id, value, pos, type, stars },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  });
-
-  const opacity = newItem ? 0.7 : 1;
-
-  return (
-    <div ref={drag} style={{ opacity }}>
-      <div className="label-wrapper">
-        <div className="label">{value}</div>
-        <div className="stars">{stars}</div>
-      </div>
-    </div>
-  );
-};
-
-const YouTubeCard = () => {
-  const [, drag] = useDrag({
-    type: 'card',
-    item: { id: 1000, value: 'YouTube Video', pos: 0, type: 'First Icebox' },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  });
-
-  return (
-    <div ref={drag} className="youtube-card" style={{ width: '300px', padding: '16px', cursor: 'move', marginBottom: '10px' }}>
-      <div className="label-wrapper">
-        <h3 className="card-title">YouTube Video</h3>
-        <p className="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec ex a justo lacinia tincidunt ut ac lacus.</p>
-      </div>
-    </div>
-  );
-};
-
-const FiveStarCard = () => {
-  const [, drag] = useDrag({
-    type: 'card',
-    item: { id: 1001, value: 'five stars', pos: 1, type: 'First Icebox' },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  });
-
-  return (
-    <div ref={drag} className="five-star-card" style={{ width: '300px', padding: '16px', cursor: 'move', marginBottom: '10px' }}>
-      <div className="label-wrapper">
-        <h3 className="card-title">Five Stars</h3>
-        <p className="card-description">This card represents five stars.</p>
-      </div>
     </div>
   );
 };
