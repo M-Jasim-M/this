@@ -4,11 +4,12 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { EventEmitter } from 'events';
 import Card2 from '../Dashboard/Card';
 import './Dnd.css';
+import '../Dashboard/Buttons.css'
 
 let data = [
   {
     icebox: true,
-    type: 'First Icebox',
+    type: 'Inprogress',
     content: [
       {
         id: 100,
@@ -37,7 +38,7 @@ let data = [
     ],
   },
   {
-    type: 'Icebox',
+    type: 'Waiting',
     content: [
       {
         id: 104,
@@ -50,7 +51,7 @@ let data = [
     ],
   },
   {
-    type: 'Doing',
+    type: 'Compleate',
     content: [
       {
         id: 104,
@@ -63,7 +64,7 @@ let data = [
     ],
   },
   {
-    type: 'Done',
+    type: 'Overdue',
     content: [{
       id: 104,
       name: 'Programming',
@@ -159,7 +160,7 @@ const CardDeck = () => {
       {stateData.map((obj) => (
         <div key={obj.type} className="label-container">
           <div className="panel">
-            <h3 className="panel-label">{obj.type}</h3>
+            <h3 className="panel-labe overdue buttondiv">{obj.type}</h3>
           </div>
           <CardDrop type={obj.type}>
             {obj.content.map((val, idx) => (

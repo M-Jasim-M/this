@@ -157,7 +157,7 @@
     margin: 0px;
     gap: 10px;
     background: #EAEDFE;
-    padding-left: 1rem;
+    /* padding-left: 0.5rem; */
 }
 
 .maicard::-webkit-scrollbar {

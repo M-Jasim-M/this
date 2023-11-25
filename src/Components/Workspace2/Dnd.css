@@ -3,8 +3,8 @@
     flex-wrap: wrap;
   }
   .label-container {
-    width: 20%;
-    margin: 10px;
+    width: 228px;
+    margin: 10px 3px 10px 2px;
   }
   
   h3.panel-label {
@@ -59,4 +59,26 @@
     bottom: 15px;
     right: 15px;
     position: absolute;
+  }
+
+  @media(max-width:1024px){
+    .label-container {
+      width: 219px;
+      margin: 10px 3px 10px 2px;
+  }
+  
+  }
+
+
+  @media(max-width:768px){
+    .label-container {
+      width: 215px;
+      margin: 10px 3px 10px 2px;
+  }
+  .tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
   }
