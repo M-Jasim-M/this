@@ -144,6 +144,7 @@
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .formcontain div:nth-of-type(4) button:disabled {
@@ -164,6 +165,10 @@
     }
     .workright{
         width: 100%;
+        padding-top: 20px;
     }
 }
+
+
+
 

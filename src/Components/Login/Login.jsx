@@ -26,6 +26,7 @@ function Login() {
   const handleCheckboxChange = () => {
     setShowPassword(!showPassword);
   };
+  
   const signupdata = {
     email,
     password,
@@ -96,7 +97,7 @@ function Login() {
                       checked={showPassword}
                       onChange={handleCheckboxChange}
                       type="checkbox"
-                      style={{ "width": "18px", "height": "16px" }}
+                      style={{ "width": "17px", "height": "15px" }}
                     />
                   </div>
                   <div className="sho">Show pasword</div>
